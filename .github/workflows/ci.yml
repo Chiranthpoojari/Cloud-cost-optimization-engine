@@ -30,9 +30,11 @@ jobs:
   validate-terraform:
     name: Validate Terraform
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: infrastructure
+
     steps:
       - uses: actions/checkout@v4
 
@@ -41,10 +43,13 @@ jobs:
         with:
           terraform_version: "1.15.6"
 
-      - name: Terraform fmt
-        run: terraform fmt -check -recursive
+      - name: Check Terraform version
+        run: terraform version
 
-      - name: Terraform init (no backend, no credentials needed)
+      - name: Terraform fmt
+        run: terraform fmt -check -recursive -diff
+
+      - name: Terraform init
         run: terraform init -backend=false
 
       - name: Terraform validate
