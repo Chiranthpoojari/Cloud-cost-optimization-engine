@@ -5,8 +5,8 @@ resource "aws_cloudwatch_event_rule" "stop_schedule" {
 }
 
 resource "aws_cloudwatch_event_target" "stop_target" {
-  rule = aws_cloudwatch_event_rule.stop_schedule.name
-  arn  = aws_lambda_function.cost_optimizer.arn
+  rule  = aws_cloudwatch_event_rule.stop_schedule.name
+  arn   = aws_lambda_function.cost_optimizer.arn
   input = jsonencode({ action = "stop" })
 }
 
@@ -25,8 +25,8 @@ resource "aws_cloudwatch_event_rule" "start_schedule" {
 }
 
 resource "aws_cloudwatch_event_target" "start_target" {
-  rule = aws_cloudwatch_event_rule.start_schedule.name
-  arn  = aws_lambda_function.cost_optimizer.arn
+  rule  = aws_cloudwatch_event_rule.start_schedule.name
+  arn   = aws_lambda_function.cost_optimizer.arn
   input = jsonencode({ action = "start" })
 }
 
