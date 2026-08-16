@@ -1049,26 +1049,6 @@ Before deploying in a production AWS environment, review IAM permissions, resour
 
 ---
 
-## Author
-
-**Chiranth Poojari**
-
-Cloud / DevOps Engineering Project
-
-**Focus Areas**
-
-```text
-AWS
-Terraform
-Python
-Lambda
-EventBridge
-Docker
-CI/CD
-Cloud FinOps
-Infrastructure Automation
-```
-
 ---
 
 > **Built to demonstrate how infrastructure automation can turn cloud cost optimization from a manual operational task into a repeatable, policy-driven engineering capability.**
